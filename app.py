@@ -9,8 +9,7 @@ mongo = PyMongo(app, uri="mongodb://localhost:27017/mission_to_mars")
 
 @app.route("/")
 def index():
-    listings = mongo.db.listings.find_one()
-    return render_template("index.html", listings=listings)
+    return render_template("index.html")
 
 
 @app.route("/scrape")
